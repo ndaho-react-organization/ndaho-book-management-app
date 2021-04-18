@@ -6,22 +6,17 @@ How to use React Context API to pass data across routes
 How to create a Custom Hook in React
 How to store data in local storage to persist it even after page refresh
 How to manage data stored in local storage using a custom hook
+How to use github actions
 
-## Available Scripts
+## Additional  Scripts 
+This for github actions (Automatic deploy)
 
-In the project directory, you can run:
+### npm predeploy
+For npm run build
 
-### `yarn start`
+### npm deploy
+For deploying it on gh-pages (gh-pages -d build)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## The app is available on:
+http://ndayiho.github.io/ndaho-book-management-app
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
