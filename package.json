@@ -1,7 +1,7 @@
 {
   "name": "ndaho-book-management-app",
   "version": "0.1.0",
-  "homepage": "http://ndayiho.github.io/ndaho-book-management-app",
+  "homepage": "https://ndaho-react-organization.github.io/ndaho-book-management-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
