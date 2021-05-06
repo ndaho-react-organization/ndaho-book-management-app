@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
 const BookForm = (props) => {
+
     const [book, setBook] = useState({
         bookname: props.book ? props.book.bookname : '',
         author: props.book ? props.book.author : '',
@@ -43,6 +44,7 @@ const BookForm = (props) => {
     };
 
     const handleInputChange = (event) => {
+        // we get name and value
         const { name, value } = event.target;
         switch (name) {
             case 'quantity':
