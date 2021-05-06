@@ -7,18 +7,25 @@ import useLocalStorage from '../hooks/useLocalStorage';
 
 const AppRouter = () => {
     const [books, setBooks] = useLocalStorage('books', []);
+
     return (
         <BrowserRouter>
             <div>
                 <Header />
                 <div className="main-content">
                     <Switch>
-                        <Route component={BooksList} path="/" exact />
+                        <Route
+                            render={(props) => (
+                                <BooksList {...props} books={books} setBooks={setBooks} />
+                            )}
+                            path="/"
+                            exact
+                        />
                         <Route
                             render={(props) => (
                                 <AddBook {...props} books={books} setBooks={setBooks} />
                             )}
-                            path="/add" exact
+                            path="/add"
                         />
                     </Switch>
                 </div>
