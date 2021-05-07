@@ -10,7 +10,7 @@ How to use github actions
 
 ## Additional module
 bootstrap\
-lodash\
+lodash --> tuto :https://grafikart.fr/tutoriels/lodash-763 \
 react-bootstrap\
 react-router-dom\
 uuid : https://www.npmjs.com/package/uuid for creatitng a book unique ID\

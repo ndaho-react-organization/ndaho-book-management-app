@@ -4,13 +4,17 @@ import { v4 as uuidv4 } from 'uuid';
 
 const BookForm = (props) => {
 
-    const [book, setBook] = useState({
-        bookname: props.book ? props.book.bookname : '',
-        author: props.book ? props.book.author : '',
-        quantity: props.book ? props.book.quantity : '',
-        price: props.book ? props.book.price : '',
-        date: props.book ? props.book.date : ''
-    });
+    const [book, setBook] = useState(() => {
+        /*use lazy initialization : the code for setting state will not be executed on every re-render of the application. 
+        It will just be executed once when the component is mounted.*/
+        return {
+          bookname: props.book ? props.book.bookname : '',
+          author: props.book ? props.book.author : '',
+          quantity: props.book ? props.book.quantity : '',
+          price: props.book ? props.book.price : '',
+          date: props.book ? props.book.date : ''
+        };
+      });
 
     const [errorMsg, setErrorMsg] = useState('');
     const { bookname, author, price, quantity } = book;
@@ -36,7 +40,7 @@ const BookForm = (props) => {
             };
             //ATTENTION
             props.handleOnSubmit(book);
-            
+
         } else {
             errorMsg = 'Please fill out all the fields.';
         }

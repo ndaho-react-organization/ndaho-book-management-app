@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route,Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 import AddBook from '../components/AddBook';
+import EditBook from '../components/EditBook';
 import BooksList from '../components/BooksList';
 import useLocalStorage from '../hooks/useLocalStorage';
 
@@ -27,6 +28,15 @@ const AppRouter = () => {
                             )}
                             path="/add"
                         />
+
+                        <Route
+                            render={(props) => (
+                                <EditBook {...props} books={books} setBooks={setBooks} />
+                            )}
+                            path="/edit/:id"
+                        />
+
+                        <Route component={() => <Redirect to="/" />} />
                     </Switch>
                 </div>
             </div>
